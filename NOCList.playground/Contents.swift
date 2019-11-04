@@ -29,14 +29,22 @@ This message will self destruct in 5 seconds.
 */
 //: ## Step 1
 //: Create constants for each of the above agents and store all their information in a tuple.
-
+let ethan: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Ethan Hunt", realName: "Tom Cruise", accessLevel: 8, compromised: false)
+let jim: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Jim Phelps", realName: "Jon Voight", accessLevel: 9, compromised: true)
+let claire: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Claire Phelps", realName: "Emmanuelle Beart", accessLevel: 5, compromised: false)
+let eugene: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Eugene Kittridge", realName: "Henry Czerny", accessLevel: 10, compromised: true)
+let franz: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Franz Krieger", realName: "Jean Reno", accessLevel: 4, compromised: false)
+let luther: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Luther Stickell", realName: "Ving Rhames", accessLevel: 4, compromised: false)
+let sarah: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Sarah Davies", realName: "Kristin Scott Thomas", accessLevel: 5, compromised: true)
+let max: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Max RotGrab", realName: "Vanessa Redgrave", accessLevel: 4, compromised: false)
+let hannah: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Hannah Williams", realName: "Ingeborga Dapkūnaitė", accessLevel: 5, compromised: true)
+let jack: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Jack Harmon", realName: "Emilio Estevez", accessLevel: 6, compromised: true)
+let frank: (coverName: String, realName: String, accessLevel: Int, compromised: Bool) = (coverName: "Frank Barnes", realName: "Dale Dye", accessLevel: 9, compromised: false)
 
 
 //: ## Step 2
 //: Place the above constants inside an array. Declare this array as a constant as well.
-
-
-
+let agents = [ethan, jim, claire, eugene, franz, luther, sarah, max, hannah, jack, frank]
 //: ## Step 3
 //: Create a function that calculates the total number of compromised agents. Inside the function, iterate over the array of agents to determine which ones are compromised. Return the total count.
 
