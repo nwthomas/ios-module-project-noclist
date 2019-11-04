@@ -80,22 +80,45 @@ print("\(cleanAgents.count) clean agents out of \(agents.count) total agents")
 //: ## Step 7
 //: Create a function called "findHighRisk" that prints out the real names and access levels of agents with level 8 or higher. If one of these agents is also currently compromised, add `**WARNING** **COMPROMISED**` to the end of the string that includes their name and access level.
 //: - Example: `Jon Voight, level: 9 **WARNING** **COMPROMISED**`
-
+func findHighRisk(agents: [(coverName: String, realName: String, accessLevel: Int, compromised: Bool)]) -> Void {
+    for agent in agents {
+        if agent.accessLevel >= 8 {
+            if agent.compromised {
+                print("\(agent.coverName), level: \(agent.accessLevel) **WARNING** **COMPRIMISED**")
+            } else {
+                print("\(agent.coverName), level: \(agent.accessLevel)")
+            }
+        }
+    }
+}
 
 
 //: ## Step 8
 //: Call the above function and check the output in the console to ensure it is functioning properly.
-
+findHighRisk(agents: agents)
 
 
 //: ## Step 9
 //: Create a function that finds totals for low, mid, and high level agents. Low level agents are 4 or lower, mid are 5-7, and high level agents are 8 or above. Iterate over each agent and use a `switch` statement to determine their level group. At the end of the function, print a statement like the following: "# low level agents, # mid level agents, and # high level agents"
-
-
-
+func totalAgentTypes(agents: [(coverName: String, realName: String, accessLevel: Int, compromised: Bool)]) -> Void {
+    var low = 0, mid = 0, high = 0
+    for agent in agents {
+        switch true {
+            case agent.accessLevel <= 4:
+                low += 1
+            case agent.accessLevel <= 7 && agent.accessLevel >= 5:
+                mid += 1
+            case agent.accessLevel >= 8:
+                high += 1
+            default:
+                print("No access level found.")
+        }
+    }
+    print("\(low) low level agents, \(mid) mid level agents, and \(high) high level agents")
+}
 //: ## Step 10
 //: Call the above function and check its output in the console.
-
+totalAgentTypes(agents: agents)
 
 
 //: ## Step 11 (Optional)
