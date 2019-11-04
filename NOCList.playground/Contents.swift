@@ -47,9 +47,15 @@ let frank: (coverName: String, realName: String, accessLevel: Int, compromised: 
 let agents = [ethan, jim, claire, eugene, franz, luther, sarah, max, hannah, jack, frank]
 //: ## Step 3
 //: Create a function that calculates the total number of compromised agents. Inside the function, iterate over the array of agents to determine which ones are compromised. Return the total count.
-
-
-
+func compromisedAgents(agents: [(coverName: String, realName: String, accessLevel: Int, compromised: Bool)]) -> Int {
+    var total = 0
+    for agent in agents {
+        if agent.compromised {
+            total += 1
+        }
+    }
+    return total
+}
 //: ## Step 4
 //: Call the above function to find the total number of compromised agents and then print a sentence that says "# agents have been compromised!" using string interpolation.
 
